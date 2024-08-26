@@ -1,0 +1,261 @@
+<!doctype html><meta charset=utf-8>
+
+
+<title>Comparisons with Baselines on Real Forward-Facing Dataset</title>
+<h2>Comparisons with Baselines on Real Forward-Facing Dataset</h2>
+
+<p>
+	Here we show rendered views from our method and other baselines on the <a href=“”https://www.matthewtancik.com/nerf”>Real Forward-Facing dataset</a>. Note that we show our results and <a href="https://zju3dv.github.io/enerf/">ENeRF</a> at 2048x1536 (2K) and <a href="https://samsunglabs.github.io/MLI/">SIMPLI</a> and <a href="https://mohammedsuhail.net/gen_patch_neural_rendering/">GPNR</a> at 1024x768 because <em>SIMPLI</em> and <em>GPNR</em> fail to produce high-resolution results at 2K.
+</p>
+<p>
+	Hover over the labels at the left to select which output to view. Hold mouse down anywhere to flip to ground truth for comparison.
+</p>
+
+<br><br>
+
+<style>
+body {
+  font-family: Helvetica, "Helvetica Neue", sans-serif;
+  background: #bbb;
+  color: #000;
+  padding: 20px 0 0 200px;
+}
+
+.label {
+  white-space: nowrap;
+  display: inline-block;
+  background: #ddd;
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+#controls {
+  position: fixed;
+  left: 20px;
+  width: 10px;
+}
+
+controls.s1 .label:nth-child(1),
+controls.s2 .label:nth-child(2),
+controls.s3 .label:nth-child(3),
+controls.s4 .label:nth-child(4),
+controls.s5 .label:nth-child(5),
+controls.s6 .label:nth-child(6),
+controls.s7 .label:nth-child(7),
+controls.s8 .label:nth-child(8) {
+  background: #48a;
+  color: #fff;
+}
+
+#examples > div {
+  display: inline-block;
+  position: relative;
+  width: 2048px;
+  max-width: 100%;
+  aspect-ratio: 2048 / 1536;
+  background: #444;
+}
+
+#examples > div > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+#examples > div > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+#examples > div::after,
+#examples > div span {
+  display: block;
+  position: absolute;
+  color: #fff;
+  background: #000;
+  opacity: .5;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  top: 0;
+}
+
+#examples > div::after {
+  left: 0;
+  padding: 0 3px 0 1px;
+  border-bottom-right-radius: 4px;
+}
+
+#examples > div span {
+  right: 0;
+  padding: 0 1px 0 3px;
+  border-bottom-left-radius: 4px;
+}
+
+#examples.s1 > div::after { content: "Ground truth"; }
+#examples.s2 > div::after { content: "Quark+"; }
+#examples.s3 > div::after { content: "Quark"; }
+#examples.s4 > div::after { content: "SIMPLI"; }
+#examples.s5 > div::after { content: "ENeRF"; }
+#examples.s6 > div::after { content: "GPNR"; }
+#examples.s7 > div::after { content: "Quark (depth)"; }
+#examples.s8 > div::after { content: "Quark+ (depth)"; }
+
+#examples.s1 > div > img:nth-child(1),
+#examples.s2 > div > img:nth-child(2),
+#examples.s3 > div > img:nth-child(3),
+#examples.s4 > div > img:nth-child(4),
+#examples.s5 > div > img:nth-child(5),
+#examples.s6 > div > img:nth-child(6),
+#examples.s7 > div > img:nth-child(7),
+#examples.s8 > div > img:nth-child(8),
+#examples.s1 > div > video:nth-child(1),
+#examples.s2 > div > video:nth-child(2),
+#examples.s3 > div > video:nth-child(3),
+#examples.s4 > div > video:nth-child(4),
+#examples.s5 > div > video:nth-child(5),
+#examples.s6 > div > video:nth-child(6),
+#examples.s7 > div > video:nth-child(7),
+#examples.s8 > div > video:nth-child(8) {
+  visibility: inherit;
+}
+
+</style>
+
+
+<div class="s1" id="controls">
+  <div class="label" onmouseenter="over(1)">Ground truth</div>
+  <div class="label" onmouseenter="over(2)">Quark+</div>
+  <div class="label" onmouseenter="over(3)">Quark</div>
+  <div class="label" onmouseenter="over(4)">SIMPLI</div>
+  <div class="label" onmouseenter="over(5)">ENeRF</div>
+  <div class="label" onmouseenter="over(6)">GPNR</div>
+  <div class="label" onmouseenter="over(7)">Quark (depth)</div>
+  <div class="label" onmouseenter="over(8)">Quark+ (depth)</div>
+</div>
+<div class="s1" id="examples">
+  <div>
+    <img src="fern/IMG_4034_actual.jpg" width="100%">
+    <img src="fern/IMG_4034_quarkHQ.jpg" width="100%">
+    <img src="fern/IMG_4034_quark.jpg" width="100%">
+    <img src="fern/IMG_4034_simpli.jpg" width="100%">
+    <img src="fern/IMG_4034_enerf.jpg" width="100%">
+    <img src="fern/IMG_4034_gpnr.jpg" width="100%">
+    <img src="fern/IMG_4034_quark-depth.jpg" width="100%">
+    <img src="fern/IMG_4034_quarkHQ-depth.jpg" width="100%">
+    <span>fern/IMG_4034</span>
+  </div>
+  <div>
+    <img src="flower/IMG_2986_actual.jpg" width="100%">
+    <img src="flower/IMG_2986_quarkHQ.jpg" width="100%">
+    <img src="flower/IMG_2986_quark.jpg" width="100%">
+    <img src="flower/IMG_2986_simpli.jpg" width="100%">
+    <img src="flower/IMG_2986_enerf.jpg" width="100%">
+    <img src="flower/IMG_2986_gpnr.jpg" width="100%">
+    <img src="flower/IMG_2986_quark-depth.jpg" width="100%">
+    <img src="flower/IMG_2986_quarkHQ-depth.jpg" width="100%">
+    <span>flower/IMG_2986</span>
+  </div>
+  <div>
+    <img src="fortress/IMG_1816_actual.jpg" width="100%">
+    <img src="fortress/IMG_1816_quarkHQ.jpg" width="100%">
+    <img src="fortress/IMG_1816_quark.jpg" width="100%">
+    <img src="fortress/IMG_1816_simpli.jpg" width="100%">
+    <img src="fortress/IMG_1816_enerf.jpg" width="100%">
+    <img src="fortress/IMG_1816_gpnr.jpg" width="100%">
+    <img src="fortress/IMG_1816_quark-depth.jpg" width="100%">
+    <img src="fortress/IMG_1816_quarkHQ-depth.jpg" width="100%">
+    <span>fortress/IMG_1816</span>
+  </div>
+  <div>
+    <img src="horns/DJI_20200223_163208_938_actual.jpg" width="100%">
+    <img src="horns/DJI_20200223_163208_938_quarkHQ.jpg" width="100%">
+    <img src="horns/DJI_20200223_163208_938_quark.jpg" width="100%">
+    <img src="horns/DJI_20200223_163208_938_simpli.jpg" width="100%">
+    <img src="horns/DJI_20200223_163208_938_enerf.jpg" width="100%">
+    <img src="horns/DJI_20200223_163208_938_gpnr.jpg" width="100%">
+    <img src="horns/DJI_20200223_163208_938_quark-depth.jpg" width="100%">
+    <img src="horns/DJI_20200223_163208_938_quarkHQ-depth.jpg" width="100%">
+    <span>horns/DJI_20200223_163208_938</span>
+  </div>
+  <div>
+    <img src="leaves/IMG_3014_actual.jpg" width="100%">
+    <img src="leaves/IMG_3014_quarkHQ.jpg" width="100%">
+    <img src="leaves/IMG_3014_quark.jpg" width="100%">
+    <img src="leaves/IMG_3014_simpli.jpg" width="100%">
+    <img src="leaves/IMG_3014_enerf.jpg" width="100%">
+    <img src="leaves/IMG_3014_gpnr.jpg" width="100%">
+    <img src="leaves/IMG_3014_quark-depth.jpg" width="100%">
+    <img src="leaves/IMG_3014_quarkHQ-depth.jpg" width="100%">
+    <span>leaves/IMG_3014</span>
+  </div>
+  <div>
+    <img src="orchids/IMG_4475_actual.jpg" width="100%">
+    <img src="orchids/IMG_4475_quarkHQ.jpg" width="100%">
+    <img src="orchids/IMG_4475_quark.jpg" width="100%">
+    <img src="orchids/IMG_4475_simpli.jpg" width="100%">
+    <img src="orchids/IMG_4475_enerf.jpg" width="100%">
+    <img src="orchids/IMG_4475_gpnr.jpg" width="100%">
+    <img src="orchids/IMG_4475_quark-depth.jpg" width="100%">
+    <img src="orchids/IMG_4475_quarkHQ-depth.jpg" width="100%">
+    <span>orchids/IMG_4475</span>
+  </div>
+  <div>
+    <img src="room/DJI_20200226_143938_168_actual.jpg" width="100%">
+    <img src="room/DJI_20200226_143938_168_quarkHQ.jpg" width="100%">
+    <img src="room/DJI_20200226_143938_168_quark.jpg" width="100%">
+    <img src="room/DJI_20200226_143938_168_simpli.jpg" width="100%">
+    <img src="room/DJI_20200226_143938_168_enerf.jpg" width="100%">
+    <img src="room/DJI_20200226_143938_168_gpnr.jpg" width="100%">
+    <img src="room/DJI_20200226_143938_168_quark-depth.jpg" width="100%">
+    <img src="room/DJI_20200226_143938_168_quarkHQ-depth.jpg" width="100%">
+    <span>room/DJI_20200226_143938_168</span>
+  </div>
+  <div>
+    <img src="trex/DJI_20200223_163557_660_actual.jpg" width="100%">
+    <img src="trex/DJI_20200223_163557_660_quarkHQ.jpg" width="100%">
+    <img src="trex/DJI_20200223_163557_660_quark.jpg" width="100%">
+    <img src="trex/DJI_20200223_163557_660_simpli.jpg" width="100%">
+    <img src="trex/DJI_20200223_163557_660_enerf.jpg" width="100%">
+    <img src="trex/DJI_20200223_163557_660_gpnr.jpg" width="100%">
+    <img src="trex/DJI_20200223_163557_660_quark-depth.jpg" width="100%">
+    <img src="trex/DJI_20200223_163557_660_quarkHQ-depth.jpg" width="100%">
+    <span>trex/DJI_20200223_163557_660</span>
+  </div>
+</div>
+
+<script>
+
+var selected = 2;
+over(2);
+function show(n) {
+  var examples = document.getElementById('examples');
+  var controls = document.getElementById('controls');
+  examples.className = 's' + n;
+  controls.className = 's' + n;
+}
+function down() {
+  show(1);
+}
+function up() {
+  show(selected);
+}
+function over(n) {
+  selected = n;
+  show(n);
+}
+document.body.addEventListener('mousedown', down);
+document.body.addEventListener('mouseup', up);
+document.body.addEventListener('mouseleave', up);
+</script>

@@ -1,0 +1,226 @@
+
+<!doctype html><meta charset=utf-8>
+
+<title>Video Comparison Between Quark and Quark+</title>
+<h2>Video comparison between Quark and Quark+</h2>
+
+<p>
+	Here we present video comparisons between two variants of our method, <em>Quark</em> and <em>Quark+</em>.
+</p>
+<p>
+	Hover over the labels at the left to select which output to view. Hold mouse down anywhere to flip to the Quark+ for comparison.
+</p>
+
+<style>
+body {
+  font-family: Helvetica, "Helvetica Neue", sans-serif;
+  background: #bbb;
+  color: #000;
+  padding: 20px 0 0 200px;
+}
+
+.label {
+  white-space: nowrap;
+  display: inline-block;
+  background: #ddd;
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+#controls {
+  position: fixed;
+  left: 20px;
+  width: 10px;
+}
+
+controls.s1 .label:nth-child(1),
+controls.s2 .label:nth-child(2),
+controls.s3 .label:nth-child(3),
+controls.s4 .label:nth-child(4) {
+  background: #48a;
+  color: #fff;
+}
+
+#examples > div {
+  display: inline-block;
+  position: relative;
+  width: 2048px;
+  max-width: 100%;
+  aspect-ratio: 2048 / 1536;
+  background: #444;
+}
+
+#examples > div > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+#examples > div > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+#examples > div::after,
+#examples > div span {
+  display: block;
+  position: absolute;
+  color: #fff;
+  background: #000;
+  opacity: .5;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  top: 0;
+}
+
+#examples > div::after {
+  left: 0;
+  padding: 0 3px 0 1px;
+  border-bottom-right-radius: 4px;
+}
+
+#examples > div span {
+  right: 0;
+  padding: 0 1px 0 3px;
+  border-bottom-left-radius: 4px;
+}
+
+#examples.s1 > div::after { content: "Quark+"; }
+#examples.s2 > div::after { content: "Quark"; }
+#examples.s3 > div::after { content: "Quark+ (depth)"; }
+#examples.s4 > div::after { content: "Quark (depth)"; }
+
+#examples.s1 > div > img:nth-child(1),
+#examples.s2 > div > img:nth-child(2),
+#examples.s3 > div > img:nth-child(3),
+#examples.s4 > div > img:nth-child(4),
+#examples.s1 > div > video:nth-child(1),
+#examples.s2 > div > video:nth-child(2),
+#examples.s3 > div > video:nth-child(3),
+#examples.s4 > div > video:nth-child(4) {
+  visibility: inherit;
+}
+
+</style>
+
+
+<div class="s1" id="controls">
+  <div class="label" onmouseenter="over(1)">Quark+</div>
+  <div class="label" onmouseenter="over(2)">Quark</div>
+  <div class="label" onmouseenter="over(3)">Quark+ (depth)</div>
+  <div class="label" onmouseenter="over(4)">Quark (depth)</div>
+</div>
+<div class="s1" id="examples">
+  <div>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="deepview_video/01_Welder-000000_quarkHQ.mp4" type="video/mp4">
+    </video>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="deepview_video/01_Welder-000000_quark.mp4" type="video/mp4">
+    </video>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="deepview_video/01_Welder-000000_depth_quarkHQ.mp4" type="video/mp4">
+    </video>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="deepview_video/01_Welder-000000_depth_quark.mp4" type="video/mp4">
+    </video>
+    <span>deepview_video/01_Welder-000000</span>
+  </div>
+  <div>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="ibrnet/fern_quarkHQ.mp4" type="video/mp4">
+    </video>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="ibrnet/fern_quark.mp4" type="video/mp4">
+    </video>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="ibrnet/fern_depth_quarkHQ.mp4" type="video/mp4">
+    </video>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="ibrnet/fern_depth_quark.mp4" type="video/mp4">
+    </video>
+    <span>ibrnet/fern</span>
+  </div>
+  <div>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="neural_3d_video/coffee_martini-000000_quarkHQ.mp4" type="video/mp4">
+    </video>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="neural_3d_video/coffee_martini-000000_quark.mp4" type="video/mp4">
+    </video>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="neural_3d_video/coffee_martini-000000_depth_quarkHQ.mp4" type="video/mp4">
+    </video>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="neural_3d_video/coffee_martini-000000_depth_quark.mp4" type="video/mp4">
+    </video>
+    <span>neural_3d_video/coffee_martini-000000</span>
+  </div>
+  <div>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="nex_shiny/cd_quarkHQ.mp4" type="video/mp4">
+    </video>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="nex_shiny/cd_quark.mp4" type="video/mp4">
+    </video>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="nex_shiny/cd_depth_quarkHQ.mp4" type="video/mp4">
+    </video>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="nex_shiny/cd_depth_quark.mp4" type="video/mp4">
+    </video>
+    <span>nex_shiny/cd</span>
+  </div>
+  <div>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="spaces/scene_000-frame_000_quarkHQ.mp4" type="video/mp4">
+    </video>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="spaces/scene_000-frame_000_quark.mp4" type="video/mp4">
+    </video>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="spaces/scene_000-frame_000_depth_quarkHQ.mp4" type="video/mp4">
+    </video>
+    <video autoplay="true" controls="true" loop="true" muted="true" width="100%">
+      <source src="spaces/scene_000-frame_000_depth_quark.mp4" type="video/mp4">
+    </video>
+    <span>spaces/scene_000-frame_000</span>
+  </div>
+</div>
+
+<script>
+
+var selected = 2;
+over(2);
+function show(n) {
+  var examples = document.getElementById('examples');
+  var controls = document.getElementById('controls');
+  examples.className = 's' + n;
+  controls.className = 's' + n;
+}
+function down() {
+  show(1);
+}
+function up() {
+  show(selected);
+}
+function over(n) {
+  selected = n;
+  show(n);
+}
+document.body.addEventListener('mousedown', down);
+document.body.addEventListener('mouseup', up);
+document.body.addEventListener('mouseleave', up);
+</script>

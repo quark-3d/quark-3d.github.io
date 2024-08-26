@@ -1,0 +1,322 @@
+
+<!doctype html><meta charset=utf-8>
+
+
+<title>Comparisons with Baselines on Mip-NeRF360, Tanks&Temples, and Deep Blending Dataset</title>
+<h2>Comparisons with Baselines on Mip-NeRF360, Tanks&Temples, and Deep Blending Dataset</h2>
+
+<p>Here we show rendered views from our method and other baselines on the <a href="https://jonbarron.info/mipnerf360/">Mip-NeRF360, <a href="https://www.tanksandtemples.org/">Tanks&Temples</a>, and <a href="http://visual.cs.ucl.ac.uk/pubs/deepblending/">Deep Blending</a> datasets. The baselines include <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3DGS</a>, <a href="https://nvlabs.github.io/instant-ngp/">Instant NGP</a>, <a href="https://jonbarron.info/mipnerf360/">MipNeRF-360</a>, and <a href="https://alexyu.net/plenoxels/">Plenoxels</a>.
+</p>
+<p>
+	Hover over the labels at the left to select which output to view. Hold mouse down anywhere to flip to ground truth for comparison.
+</p>
+
+<br><br>
+
+<style>
+body {
+  font-family: Helvetica, "Helvetica Neue", sans-serif;
+  background: #bbb;
+  color: #000;
+  padding: 20px 0 0 200px;
+}
+
+.label {
+  white-space: nowrap;
+  display: inline-block;
+  background: #ddd;
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+#controls {
+  position: fixed;
+  left: 20px;
+  width: 10px;
+}
+
+controls.s1 .label:nth-child(1),
+controls.s2 .label:nth-child(2),
+controls.s3 .label:nth-child(3),
+controls.s4 .label:nth-child(4),
+controls.s5 .label:nth-child(5),
+controls.s6 .label:nth-child(6),
+controls.s7 .label:nth-child(7),
+controls.s8 .label:nth-child(8),
+controls.s9 .label:nth-child(9) {
+  background: #48a;
+  color: #fff;
+}
+
+#examples > div {
+  display: inline-block;
+  position: relative;
+  width: 1256px;
+  max-width: 100%;
+  aspect-ratio: 1256 / 828;
+  background: #444;
+}
+
+#examples > div > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+#examples > div > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+#examples > div::after,
+#examples > div span {
+  display: block;
+  position: absolute;
+  color: #fff;
+  background: #000;
+  opacity: .5;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  top: 0;
+}
+
+#examples > div::after {
+  left: 0;
+  padding: 0 3px 0 1px;
+  border-bottom-right-radius: 4px;
+}
+
+#examples > div span {
+  right: 0;
+  padding: 0 1px 0 3px;
+  border-bottom-left-radius: 4px;
+}
+
+#examples.s1 > div::after { content: "Ground truth"; }
+#examples.s2 > div::after { content: "Quark+"; }
+#examples.s3 > div::after { content: "Quark"; }
+#examples.s4 > div::after { content: "3DGS-30K"; }
+#examples.s5 > div::after { content: "3DGS-7K"; }
+#examples.s6 > div::after { content: "INGP-Base"; }
+#examples.s7 > div::after { content: "INGP-Big"; }
+#examples.s8 > div::after { content: "MipNeRF-360"; }
+#examples.s9 > div::after { content: "Plenoxels"; }
+
+#examples.s1 > div > img:nth-child(1),
+#examples.s2 > div > img:nth-child(2),
+#examples.s3 > div > img:nth-child(3),
+#examples.s4 > div > img:nth-child(4),
+#examples.s5 > div > img:nth-child(5),
+#examples.s6 > div > img:nth-child(6),
+#examples.s7 > div > img:nth-child(7),
+#examples.s8 > div > img:nth-child(8),
+#examples.s9 > div > img:nth-child(9),
+#examples.s1 > div > video:nth-child(1),
+#examples.s2 > div > video:nth-child(2),
+#examples.s3 > div > video:nth-child(3),
+#examples.s4 > div > video:nth-child(4),
+#examples.s5 > div > video:nth-child(5),
+#examples.s6 > div > video:nth-child(6),
+#examples.s7 > div > video:nth-child(7),
+#examples.s8 > div > video:nth-child(8),
+#examples.s9 > div > video:nth-child(9) {
+  visibility: inherit;
+}
+
+</style>
+
+
+<div class="s1" id="controls">
+  <div class="label" onmouseenter="over(1)">Ground truth</div>
+  <div class="label" onmouseenter="over(2)">Quark+</div>
+  <div class="label" onmouseenter="over(3)">Quark</div>
+  <div class="label" onmouseenter="over(4)">3DGS-30K</div>
+  <div class="label" onmouseenter="over(5)">3DGS-7K</div>
+  <div class="label" onmouseenter="over(6)">INGP-Base</div>
+  <div class="label" onmouseenter="over(7)">INGP-Big</div>
+  <div class="label" onmouseenter="over(8)">MipNeRF-360</div>
+  <div class="label" onmouseenter="over(9)">Plenoxels</div>
+</div>
+<div class="s1" id="examples">
+  <div>
+    <img src="bicycle/gt.jpg" width="100%">
+    <img src="bicycle/quarkHQ.jpg" width="100%">
+    <img src="bicycle/quark.jpg" width="100%">
+    <img src="bicycle/3dgs_30000.jpg" width="100%">
+    <img src="bicycle/3dgs_7000.jpg" width="100%">
+    <img src="bicycle/ingp.jpg" width="100%">
+    <img src="bicycle/ingp-big.jpg" width="100%">
+    <img src="bicycle/mipnerf360.jpg" width="100%">
+    <img src="bicycle/plenoxels.jpg" width="100%">
+    <span>bicycle/</span>
+  </div>
+  <div>
+    <img src="bonsai/gt.jpg" width="100%">
+    <img src="bonsai/quarkHQ.jpg" width="100%">
+    <img src="bonsai/quark.jpg" width="100%">
+    <img src="bonsai/3dgs_30000.jpg" width="100%">
+    <img src="bonsai/3dgs_7000.jpg" width="100%">
+    <img src="bonsai/ingp.jpg" width="100%">
+    <img src="bonsai/ingp-big.jpg" width="100%">
+    <img src="bonsai/mipnerf360.jpg" width="100%">
+    <img src="bonsai/plenoxels.jpg" width="100%">
+    <span>bonsai/</span>
+  </div>
+  <div>
+    <img src="counter/gt.jpg" width="100%">
+    <img src="counter/quarkHQ.jpg" width="100%">
+    <img src="counter/quark.jpg" width="100%">
+    <img src="counter/3dgs_30000.jpg" width="100%">
+    <img src="counter/3dgs_7000.jpg" width="100%">
+    <img src="counter/ingp.jpg" width="100%">
+    <img src="counter/ingp-big.jpg" width="100%">
+    <img src="counter/mipnerf360.jpg" width="100%">
+    <img src="counter/plenoxels.jpg" width="100%">
+    <span>counter/</span>
+  </div>
+  <div>
+    <img src="flowers/gt.jpg" width="100%">
+    <img src="flowers/quarkHQ.jpg" width="100%">
+    <img src="flowers/quark.jpg" width="100%">
+    <img src="flowers/3dgs_30000.jpg" width="100%">
+    <img src="flowers/3dgs_7000.jpg" width="100%">
+    <img src="flowers/ingp.jpg" width="100%">
+    <img src="flowers/ingp-big.jpg" width="100%">
+    <img src="flowers/mipnerf360.jpg" width="100%">
+    <img src="flowers/plenoxels.jpg" width="100%">
+    <span>flowers/</span>
+  </div>
+  <div>
+    <img src="garden/gt.jpg" width="100%">
+    <img src="garden/quarkHQ.jpg" width="100%">
+    <img src="garden/quark.jpg" width="100%">
+    <img src="garden/3dgs_30000.jpg" width="100%">
+    <img src="garden/3dgs_7000.jpg" width="100%">
+    <img src="garden/ingp.jpg" width="100%">
+    <img src="garden/ingp-big.jpg" width="100%">
+    <img src="garden/mipnerf360.jpg" width="100%">
+    <img src="garden/plenoxels.jpg" width="100%">
+    <span>garden/</span>
+  </div>
+  <div>
+    <img src="kitchen/gt.jpg" width="100%">
+    <img src="kitchen/quarkHQ.jpg" width="100%">
+    <img src="kitchen/quark.jpg" width="100%">
+    <img src="kitchen/3dgs_30000.jpg" width="100%">
+    <img src="kitchen/3dgs_7000.jpg" width="100%">
+    <img src="kitchen/ingp.jpg" width="100%">
+    <img src="kitchen/ingp-big.jpg" width="100%">
+    <img src="kitchen/mipnerf360.jpg" width="100%">
+    <img src="kitchen/plenoxels.jpg" width="100%">
+    <span>kitchen/</span>
+  </div>
+  <div>
+    <img src="playroom/gt.jpg" width="100%">
+    <img src="playroom/quarkHQ.jpg" width="100%">
+    <img src="playroom/quark.jpg" width="100%">
+    <img src="playroom/3dgs_30000.jpg" width="100%">
+    <img src="playroom/3dgs_7000.jpg" width="100%">
+    <img src="playroom/ingp.jpg" width="100%">
+    <img src="playroom/ingp-big.jpg" width="100%">
+    <img src="playroom/mipnerf360.jpg" width="100%">
+    <img src="playroom/plenoxels.jpg" width="100%">
+    <span>playroom/</span>
+  </div>
+  <div>
+    <img src="room/gt.jpg" width="100%">
+    <img src="room/quarkHQ.jpg" width="100%">
+    <img src="room/quark.jpg" width="100%">
+    <img src="room/3dgs_30000.jpg" width="100%">
+    <img src="room/3dgs_7000.jpg" width="100%">
+    <img src="room/ingp.jpg" width="100%">
+    <img src="room/ingp-big.jpg" width="100%">
+    <img src="room/mipnerf360.jpg" width="100%">
+    <img src="room/plenoxels.jpg" width="100%">
+    <span>room/</span>
+  </div>
+  <div>
+    <img src="stump/gt.jpg" width="100%">
+    <img src="stump/quarkHQ.jpg" width="100%">
+    <img src="stump/quark.jpg" width="100%">
+    <img src="stump/3dgs_30000.jpg" width="100%">
+    <img src="stump/3dgs_7000.jpg" width="100%">
+    <img src="stump/ingp.jpg" width="100%">
+    <img src="stump/ingp-big.jpg" width="100%">
+    <img src="stump/mipnerf360.jpg" width="100%">
+    <img src="stump/plenoxels.jpg" width="100%">
+    <span>stump/</span>
+  </div>
+  <div>
+    <img src="train/gt.jpg" width="100%">
+    <img src="train/quarkHQ.jpg" width="100%">
+    <img src="train/quark.jpg" width="100%">
+    <img src="train/3dgs_30000.jpg" width="100%">
+    <img src="train/3dgs_7000.jpg" width="100%">
+    <img src="train/ingp.jpg" width="100%">
+    <img src="train/ingp-big.jpg" width="100%">
+    <img src="train/mipnerf360.jpg" width="100%">
+    <img src="train/plenoxels.jpg" width="100%">
+    <span>train/</span>
+  </div>
+  <div>
+    <img src="treehill/gt.jpg" width="100%">
+    <img src="treehill/quarkHQ.jpg" width="100%">
+    <img src="treehill/quark.jpg" width="100%">
+    <img src="treehill/3dgs_30000.jpg" width="100%">
+    <img src="treehill/3dgs_7000.jpg" width="100%">
+    <img src="treehill/ingp.jpg" width="100%">
+    <img src="treehill/ingp-big.jpg" width="100%">
+    <img src="treehill/mipnerf360.jpg" width="100%">
+    <img src="treehill/plenoxels.jpg" width="100%">
+    <span>treehill/</span>
+  </div>
+  <div>
+    <img src="truck/gt.jpg" width="100%">
+    <img src="truck/quarkHQ.jpg" width="100%">
+    <img src="truck/quark.jpg" width="100%">
+    <img src="truck/3dgs_30000.jpg" width="100%">
+    <img src="truck/3dgs_7000.jpg" width="100%">
+    <img src="truck/ingp.jpg" width="100%">
+    <img src="truck/ingp-big.jpg" width="100%">
+    <img src="truck/mipnerf360.jpg" width="100%">
+    <img src="truck/plenoxels.jpg" width="100%">
+    <span>truck/</span>
+  </div>
+</div>
+
+<script>
+
+var selected = 2;
+over(2);
+function show(n) {
+  var examples = document.getElementById('examples');
+  var controls = document.getElementById('controls');
+  examples.className = 's' + n;
+  controls.className = 's' + n;
+}
+function down() {
+  show(1);
+}
+function up() {
+  show(selected);
+}
+function over(n) {
+  selected = n;
+  show(n);
+}
+document.body.addEventListener('mousedown', down);
+document.body.addEventListener('mouseup', up);
+document.body.addEventListener('mouseleave', up);
+</script>

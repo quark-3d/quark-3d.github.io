@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="Quark: Real-time, High-resolution, and General Neural View Synthesis"
+    name="description" />
+  <meta property="og:type" content="website" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <meta name="google-site-verification" content="sdz4d86QkTWaWHiWkS9mtiln38Bu0wirf94l-z1MkhQ" />
+
+
+  <title>Quark: Real-time, High-resolution, and General Neural View Synthesis</title>
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-87HN038KJT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-87HN038KJT');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script
+    type="text/javascript">WebFont.load({ google: { families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic", "Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic", "Ubuntu:300,300italic,400,400italic,500,500italic,700,700italic", "Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic", "Changa One:400,400italic", "Varela Round:400", "Bungee Shade:regular", "Roboto:300,regular,500", "Bungee Outline:regular"] } });</script>
+  <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="script.js" type="text/javascript"></script>
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <link href="data/icons/wand_black.svg" rel="icon" media="(prefers-color-scheme: light)" />
+  <link href="data/icons/wand_white.svg" rel="icon" media="(prefers-color-scheme: dark)" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">-->
+  <link rel="stylesheet" href="css/carousel.css" type="text/css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+
+<body>
+
+
+  <div class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-three-quarters content">
+          <div class="title-row">
+            <h1 class="title is-1">Quark: Real-time, High-resolution, and General Neural View Synthesis</h1>
+          </div>
+
+
+
+          <section class="section has-carousel" id="carousel" style="padding: 0; margin: auto; ">
+            <div id="carousel-results" class="carousel">
+
+              <div class="item-1">
+                <figure class="image is-16by9">
+                  <video class="has-ratio" muted controls loop autoplay>
+                    <source src="results/carousel_video_results/mnerf360_vase.mp4" type="video/mp4" width="100%" height="100%">
+                      "Your browser does not support the video tag"
+                  </video>
+                </figure>
+              </div>
+             
+
+              <div class="item-2">
+                <figure class="image is-16by9">
+                  <video class="has-ratio" muted controls loop autoplay>
+                    <source src="results/carousel_video_results/tanks_and_temples_truck.mp4" type="video/mp4" width="100%" height="100%">
+                      "Your browser does not support the video tag"
+                  </video>
+                </figure>
+              </div>
+
+              <div class="item-3">
+                <figure class="image is-16by9">
+                  <video class="has-ratio" muted controls loop autoplay>
+                    <source src="results/carousel_video_results/dl3dv_gold_statues.mp4" type="video/mp4" width="100%" height="100%">
+                      "Your browser does not support the video tag"
+                  </video>
+                </figure>
+              </div>
+
+
+              <div class="item-4">
+                <figure class="image is-16by9">
+                  <video class="has-ratio" muted controls loop autoplay>
+                    <source src="results/carousel_video_results/tanks_and_temples_train.mp4" type="video/mp4" width="100%" height="100%">
+                      "Your browser does not support the video tag"
+                  </video>
+                </figure>
+              </div>
+
+              <div class="item-5">
+                <figure class="image is-16by9">
+                  <video class="has-ratio" muted controls loop autoplay>
+                    <source src="results/carousel_video_results/dl3dv_shiny_car.mp4" type="video/mp4" width="100%" height="100%">
+                      "Your browser does not support the video tag"
+                  </video>
+                </figure>
+              </div>
+
+              <div class="item-6">
+                <figure class="image is-16by9">
+                  <video class="has-ratio" muted controls loop autoplay>
+                    <source src="results/carousel_video_results/dl3dv_dress.mp4" type="video/mp4" width="100%" height="100%">
+                      "Your browser does not support the video tag"
+                  </video>
+                </figure>
+              </div>
+
+
+              <div class="item-7">
+                <figure class="image is-16by9">
+                  <video class="has-ratio" muted controls loop autoplay>
+                    <source src="results/carousel_video_results/dl3dv_george_washington.mp4" type="video/mp4" width="100%" height="100%">
+                      "Your browser does not support the video tag"
+                  </video>
+                </figure>
+              </div>
+
+              <div class="item-8">
+                <figure class="image is-16by9">
+                  <video class="has-ratio" muted controls loop autoplay>
+                    <source src="results/carousel_video_results/dl3dv_tiger_15s.mp4" type="video/mp4" width="100%" height="100%">
+                      "Your browser does not support the video tag"
+                  </video>
+                </figure>
+              </div>
+
+              <div class="item-9">
+                <figure class="image is-16by9">
+                  <video class="has-ratio" muted controls loop autoplay>
+                    <source src="results/carousel_video_results/dl3dv_statue.mp4" type="video/mp4" width="100%" height="100%">
+                      "Your browser does not support the video tag"
+                  </video>
+                </figure>
+              </div>
+
+              <div class="item-10">
+                <figure class="image is-16by9">
+                  <video class="has-ratio" muted controls loop autoplay>
+                    <source src="results/carousel_video_results/dl3dv_pond_reflection.mp4" type="video/mp4" width="100%" height="100%">
+                      "Your browser does not support the video tag"
+                  </video>
+                </figure>
+              </div>
+
+            </div>
+          </section>
+
+
+          <h2 class="title is-3">Overview</h2>
+          <div class="paragraph">
+            <p>
+            In this supplementary material, we provide comprehensive comparisons with baseline methods and analyze various design choices. At the top of this page are motion paths reconstructed and rendered at 30 fps with Quark+ for <a href="https://jonbarron.info/mipnerf360/">Mip-NeRF360, <a href="https://www.tanksandtemples.org/">Tanks&Temples</a>, and <a href="results/image_results/dl3dv/index.html">DL3DV</a> scenes. Next we show <a href="#video-cmp">video comparisons</a> against the baselines, followed by <a href="#image-cmp">image comparisons</a> on multiple datasets, including the <a href="results/image_results/rff/index.html">Real Forward Facing (RFF) Dataset</a>, <a href="results/image_results/shiny/index.html">Shiny</a>, <a href="results/image_results/neural_3d_video/index.html">Neural 3D Video</a>, and <a href="results/image_results/dl3dv/index.html">DL3DV</a>. Then, we <a href="#ablation">ablate</a> our design choices and present the corresponding <a href="results/ablations/algorithm_ablation_image_results/index.html">image comparisons</a>. Finally, we offer a video comparison between the real-time and high-quality versions of our method, <a href="results/ablations/quark_vs_quarkHQ/index.html"><em>Quark</em> and <em>Quark+</em></a>.
+            </p>
+          </div>
+
+          <h2 class="title is-3" id='video-cmp'>Video Result Comparisons</h2>
+
+          <video id="welder-video" muted autoplay webkit-playsinline playsinline loop>
+            <source id="welder-video-src" src="results/video_results/welder_quark.mp4" poster="/data/test.jpg" type="video/mp4">
+          </video>
+          <div class="video-text">
+            <span class="overlay-text" id="welder-text">"Quark"</span>
+          </div>
+          <div class="base-row welder-thumbnail-row">
+            <div class="base-col welder-thumbnail-col">
+              <button class="thumbnail-btn" id="welder_quarkHQ">
+                Quark+
+              </button>
+            </div>
+            <div class="base-col welder-thumbnail-col">
+              <button class="thumbnail-btn" id="welder_quark">
+                Quark
+              </button>
+            </div>
+            <div class="base-col welder-thumbnail-col">
+              <button class="thumbnail-btn" id="welder_enerf">
+                ENeRF
+              </button>
+            </div>
+            <div class="base-col welder-thumbnail-col">
+              <button class="thumbnail-btn" id="welder_simpli">
+                SIMPLI
+              </button>
+            </div>
+            <div class="base-col welder-thumbnail-col">
+              <button class="thumbnail-btn" id="welder_gpnr">
+                GPNR
+              </button>
+            </div>
+            <div class="base-col welder-thumbnail-col">
+              <button class="thumbnail-btn" id="welder_quarkHQ_depth">
+                Quark+ (depth)
+              </button>
+            </div>
+            <div class="base-col welder-thumbnail-col">
+              <button class="thumbnail-btn" id="welder_quark_depth">
+                Quark (depth)
+              </button>
+            </div>
+          </div>
+
+          <video id="tools-video" muted autoplay webkit-playsinline playsinline loop>
+            <source id="tools-video-src" src="results/video_results/tools_quark.mp4" poster="/data/test.jpg" type="video/mp4">
+          </video>
+          <div class="video-text">
+            <span class="overlay-text" id="tools-text">"Quark"</span>
+          </div>
+          <div class="base-row tools-thumbnail-row">
+            <div class="base-col tools-thumbnail-col">
+              <button class="thumbnail-btn" id="tools_quarkHQ">
+                Quark+
+              </button>
+            </div>
+            <div class="base-col tools-thumbnail-col">
+              <button class="thumbnail-btn" id="tools_quark">
+                Quark
+              </button>
+            </div>
+            <div class="base-col tools-thumbnail-col">
+              <button class="thumbnail-btn" id="tools_enerf">
+                ENeRF
+              </button>
+            </div>
+            <div class="base-col tools-thumbnail-col">
+              <button class="thumbnail-btn" id="tools_simpli">
+                SIMPLI
+              </button>
+            </div>
+            <div class="base-col tools-thumbnail-col">
+              <button class="thumbnail-btn" id="tools_gpnr">
+                GPNR
+              </button>
+            </div>
+            <div class="base-col tools-thumbnail-col">
+              <button class="thumbnail-btn" id="tools_quarkHQ_depth">
+                Quark+ (depth)
+              </button>
+            </div>
+            <div class="base-col tools-thumbnail-col">
+              <button class="thumbnail-btn" id="tools_quark_depth">
+                Quark (depth)
+              </button>
+            </div>
+          </div>
+
+          <video id="trex-video" muted autoplay webkit-playsinline playsinline loop>
+            <source id="trex-video-src" src="results/video_results/trex_quark.mp4" poster="/data/test.jpg" type="video/mp4">
+          </video>
+          <div class="video-text">
+            <span class="overlay-text" id="trex-text">"Quark"</span>
+          </div>
+          <div class="base-row trex-thumbnail-row">
+            <div class="base-col trex-thumbnail-col">
+              <button class="thumbnail-btn" id="trex_quarkHQ">
+                Quark+
+              </button>
+            </div>
+            <div class="base-col trex-thumbnail-col">
+              <button class="thumbnail-btn" id="trex_quark">
+                Quark
+              </button>
+            </div>
+            <div class="base-col trex-thumbnail-col">
+              <button class="thumbnail-btn" id="trex_enerf">
+                ENeRF
+              </button>
+            </div>
+            <div class="base-col trex-thumbnail-col">
+              <button class="thumbnail-btn" id="trex_simpli">
+                SIMPLI
+              </button>
+            </div>
+            <div class="base-col trex-thumbnail-col">
+              <button class="thumbnail-btn" id="trex_gpnr">
+                GPNR
+              </button>
+            </div>
+            <div class="base-col trex-thumbnail-col">
+              <button class="thumbnail-btn" id="trex_quarkHQ_depth">
+                Quark+ (depth)
+              </button>
+            </div>
+            <div class="base-col trex-thumbnail-col">
+              <button class="thumbnail-btn" id="trex_quark_depth">
+                Quark (depth)
+              </button>
+            </div>
+          </div>
+
+          <h2 class="title is-3" id="image-cmp">Image Result Comparisons</h2>
+	  <div class="paragraph">
+            <p>We evaluate our method against various baselines across a diverse set of datasts below. We first compare our method with <a href="https://zju3dv.github.io/enerf/">ENeRF</a>, <a href="https://samsunglabs.github.io/MLI/">SIMPLI</a>, and <a href="https://mohammedsuhail.net/gen_patch_neural_rendering/">GPNR</a> on <a href="https://www.matthewtancik.com/nerf">Real Forward-facing</a>, <a href="https://nex-mpi.github.io/">Shiny</a>, and <a href="https://github.com/facebookresearch/Neural_3D_Video">Neural 3D Video</a> datasets. We then comapre our method with <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3DGS</a>, <a href="https://nvlabs.github.io/instant-ngp/">Instant NGP</a>, <a href="https://jonbarron.info/mipnerf360/">MipNeRF-360</a>, <a href="https://docs.nerf.studio/nerfology/methods/nerfacto.html">Nerfacto</a>, <a href="https://jonbarron.info/zipnerf/">ZipNeRF</a> on the <a href="https://dl3dv-10k.github.io/DL3DV-10K/">DL3DV</a> dataset. Finally, we show <a href="results/image_results/3dgs/index.html"><comparisons</a> with <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3DGS</a>, <a href="https://nvlabs.github.io/instant-ngp/">Instant NGP</a>, <a href="https://jonbarron.info/mipnerf360/">MipNeRF-360</a>, and <a href="https://alexyu.net/plenoxels/">Plenoxels</a> on the <a href="https://jonbarron.info/mipnerf360/">Mip-NeRF360, <a href="https://www.tanksandtemples.org/">Tanks&Temples</a>, and <a href="http://visual.cs.ucl.ac.uk/pubs/deepblending/">Deep Blending</a> datasets. </p>
+          </div>
+          
+          <div class="tile is-ancestor is-vertical">
+            <div class="tile is-parent">
+              <div class="tile is-child has-text-vcentered">
+                <a href="results/image_results/rff/index.html"><img src="thumbs/rff.jpg" class="img thumbnails"></a>
+                <br>View result comparison on <a href="results/image_results/rff/index.html"><strong>Real Foward-Facing (RFF) Dataset</strong></a>.
+              </div>
+
+              <div class="tile is-child has-text-vcentered">
+                <a href="results/image_results/shiny/index.html"><img src="thumbs/shiny.jpg" class="img thumbnails"></a>
+                <br>View result comparison on <a href="results/image_results/shiny/index.html"><strong>Shiny</strong></a>.
+              </div>
+            </div>
+
+            <div class="tile is-parent">
+              <div class="tile is-child has-text-vcentered">
+                <a href="results/image_results/neural_3d_video/index.html"><img src="thumbs/neural_3d_video.jpg" class="img thumbnails"></a>
+                <br>View result comparison on <a href="results/image_results/neural_3d_video/index.html"><strong>Neural 3D Video</strong></a>.
+              </div>
+
+              <div class="tile is-child has-text-vcentered">
+                <a href="results/image_results/dl3dv/index.html"><img src="thumbs/dl3dv.jpg" class="img thumbnails"></a>
+                <br>View result comparison on <a href="results/image_results/dl3dv/index.html"><strong>DL3DV</strong></a>.
+              </div>
+            </div>
+
+            <div class="tile is-parent">
+              <div class="tile is-child has-text-vcentered">
+                <a href="results/image_results/3dgs/index.html"><img src="thumbs/3dgs.jpg" class="img thumbnails"></a>
+                <br>View result comparison on <a href="results/image_results/3dgs/index.html"><strong>Mip-NeRF360</strong>, <strong>Tanks&Temples</strong>, and <strong>Deep Blending</strong> dataset</a>.
+              </div>
+
+              <div class="tile is-child has-text-vcentered">
+              </div>
+            </div>
+
+
+
+          <h2 class="title is-3" id="ablation">Ablation Study</h2>
+          
+          <div class="paragraph">
+          	<p>We first ablate our design choices and show corresponding image comparisons. We then present video result comparsions of two variants of our method, <em>Quark</em> and <em>Quark+</em>.</p>
+          </div>
+          <div class="tile is-ancestor is-vertical">
+            <div class="tile is-parent">
+              <div class="tile is-child has-text-vcentered">
+                <a href="results/ablations/algorithm_ablation_image_results/index.html"><img src="thumbs/ablation.jpg" class="img thumbnails"></a>
+                <br>View <a href="results/ablations/algorithm_ablation_image_results/index.html"><strong>image ablation comparisons</strong></a> .
+              </div>
+
+              <div class="tile is-child has-text-vcentered">
+                <a href="results/ablations/quark_vs_quarkHQ/index.html"><img src="thumbs/quark_vs_quarkHQ.jpg" class="img thumbnails"></a>
+                <br>View <a href="results/ablations/quark_vs_quarkHQ/index.html"><strong>video comparison</strong></a> between <strong>Quark</strong> and <strong>Quark+</strong>.
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+<script>
+
+bulmaCarousel.attach('#carousel-results', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+    });
+</script>
+
+</html>
